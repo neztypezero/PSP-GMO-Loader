@@ -1,0 +1,181 @@
+//
+//  SceneAnimationSelection.m
+//  GmoLoader
+//
+//  Created by David Nesbitt on 9/7/10.
+//  Copyright 2010 NezSoft. All rights reserved.
+//
+
+#import <OpenGLES/EAGL.h>
+
+#import "SceneAnimationSelection.h"
+#import "DataResourceManager.h"
+#import "AnimationSelectionController.h"
+#import "ModelNameAniIndexHolder.h"
+#import "NezBonedModel.h"
+#import "Math.h"
+#import "matrix.h"
+
+static int THUMBNAIL_WIDTH = 64;
+
+#define HALO_SCALE 0.04f
+
+@interface SceneAnimationSelection (private)
+
+-(void)loadModels:(EAGLContext*)context WithModelName:(NSString*)modelName AnimationIndex:(int)index;
+
+@end
+
+@implementation SceneAnimationSelection
+
++(NSString*)getSceneName {
+	return @"AnimationSelection";
+}
+
+-(vec3)getInitialEye {
+	static vec3 v = {0.0f, 0.9f, 3.0f};
+	return v;
+}
+
+-(vec3)getInitialTarget {
+	static vec3 v = {0.0f, 0.9f, 1.0f};
+	return v;
+}
+
+-(id)init {
+	if (self = [super initWithFPS:THIRTY_FRAMES_PER_SECOND]) {
+		modelAnimationArray = NULL;
+		mat4f_LoadPerspective(FOV_60_DEGREES, 1.0f, 0.1f, 1000.0f, smallViewProjMat);
+		smallViewPortX = 0;
+		showList = YES;
+		mainModel = nil;
+		modelName = nil;
+		selectedModelIndex = 0;
+	}
+	return self;
+}
+
+-(void)makeController {
+	controller = [[AnimationSelectionController alloc] initWithScene:self];
+}
+
+-(void)setContext:(EAGLContext*)context WithArguments:(id)arguments {
+	[super setContext:context WithArguments:arguments];
+	
+	THUMBNAIL_WIDTH = screenWidth/3;
+	
+//	[NSThread detachNewThreadSelector:@selector(loadModels:) toTarget:self withObject:context];
+	ModelNameAniIndexHolder *modelInfo = arguments;
+	[self loadModels:context WithModelName:modelInfo->modelName AnimationIndex:modelInfo->animationIndex];
+}
+
+-(id)getNextSceneArguments:(NSString*)sceneName {
+	return [[[ModelNameAniIndexHolder alloc] initWithName:modelName Index:selectedModelIndex] autorelease];
+}
+
+- (void) dealloc {
+	if (animationCount > 0) {
+		for (int i=0; i<animationCount; i++) {
+			[modelAnimationArray[i] release];
+		}
+		free(modelAnimationArray);
+	}
+	if (mainModel) {
+		[mainModel release];
+	}
+	if (modelName) {
+		[modelName release];
+	}
+    [super dealloc];
+}
+
+-(void)loadModels:(EAGLContext*)context WithModelName:(NSString*)name AnimationIndex:(int)index {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
+	[EAGLContext setCurrentContext:context];
+
+	modelName = [name retain];
+	NezBonedModel *modelData = [[DataResourceManager instance] loadModel:modelName ofType:@"gmo"];
+
+//	NezBonedModel *modelData = [[DataResourceManager instance] loadModel:@"aeris" ofType:@"gmo"];
+//	NezBonedModel *modelData = [[DataResourceManager instance] loadModel:@"squall" ofType:@"gmo"];
+//	NezBonedModel *modelData = [[DataResourceManager instance] loadModel:@"sephiroth" ofType:@"gmo"];
+	
+	for (int i=2; i<modelData->partCount; i++) { //Only display the 1st 2 parts so set the others to invisible
+		modelData->partArray[i].state = PART_INVISIBLE;
+	}
+	animationCount = [modelData->motionArray count];
+	if (animationCount > 0) {
+		selectedModelIndex = 0;
+		NezHaloModel **aniArray = malloc(sizeof(NezHaloModel*)*animationCount);
+		for (int i=0; i<animationCount; i++) {
+			aniArray[i] = [[NezHaloModel alloc] initWithModel:modelData];
+			[aniArray[i] setMotion:i];
+		}
+		[aniArray[selectedModelIndex] setHaloScaleMax:HALO_SCALE];
+		mainModel = [[NezAnimatedModel alloc] initWithModel:modelData];
+		[mainModel setMotion:index];
+
+		[(AnimationSelectionController*)controller setAnimationCount:animationCount];
+
+		modelAnimationArray = aniArray;
+	}
+	[pool release];
+}
+
+-(void)setSelectedModel:(int)i {
+	[modelAnimationArray[selectedModelIndex] setHaloScaleMax:0.0f];
+	selectedModelIndex = i;
+	[modelAnimationArray[selectedModelIndex] setHaloScaleMax:HALO_SCALE];
+	[mainModel setMotion:i];
+}
+
+-(void)toggleList {
+	showList = !showList;
+}
+
+-(void)setListPosition:(float)x {
+	smallViewPortX = x;
+}
+
+-(void)updateWithFramesElapsed:(float)framesElapsed {
+	if (modelAnimationArray) {
+		for (int i=0; i<animationCount; i++) {
+			[modelAnimationArray[i] updateWithFramesElapsed:framesElapsed];
+		}
+		[mainModel updateWithFramesElapsed:framesElapsed];
+	}
+}
+
+-(void)draw {
+	if (modelAnimationArray) {
+		glViewport(0, 0, screenWidth, screenHeight);
+		
+		MatrixMultiply(projectionMatrix, [camera matrix], modelViewProj);
+		[mainModel drawWithMatrix:modelViewProj];
+		
+		if (showList) {
+			float scale[] = {
+				0.25f, 0.25f, 0.25f
+			};
+			MatrixGetScale(scale, modelViewMatrix);
+			modelViewMatrix[13] = -0.25f;
+			modelViewMatrix[14] = -0.5f;
+			MatrixMultiply(smallViewProjMat, modelViewMatrix, modelViewProj);
+			
+			int x=smallViewPortX;
+			for (int i=0; i<animationCount; i++) {
+				if (x > -THUMBNAIL_WIDTH) {
+					glViewport(x, 0, THUMBNAIL_WIDTH, THUMBNAIL_WIDTH);
+					[modelAnimationArray[i] drawWithMatrix:modelViewProj];
+				}
+				if (x >= screenWidth) {
+					break;
+				}
+				x += THUMBNAIL_WIDTH;
+			}
+		}
+	}
+}
+
+@end

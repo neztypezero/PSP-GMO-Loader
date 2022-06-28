@@ -1,0 +1,34 @@
+//
+//  AnimationSelectionController.h
+//  GmoLoader
+//
+//  Created by David Nesbitt on 9/19/10.
+//  Copyright 2010 NezSoft. All rights reserved.
+//
+
+#import "ZoomRotationController.h"
+
+#define RUNNING_AVERAGE_COUNT 10
+
+@interface AnimationSelectionController : ZoomRotationController {
+	UILabel *fpsLabel;
+
+	float frames[RUNNING_AVERAGE_COUNT];
+	float total;
+	int nextIndex;
+
+	float smallViewPortX;
+	int barWidth;
+	int smallestX;
+	
+	int touchDownX, touchDownY;
+	int downViewPortX;
+	int velocity;
+	BOOL moved;
+	
+	int animationCount;
+}
+
+-(void)setAnimationCount:(int)count;
+
+@end

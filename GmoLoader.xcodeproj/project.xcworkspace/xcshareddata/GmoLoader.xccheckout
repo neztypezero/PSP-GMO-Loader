@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B5836065-A2BA-4A6E-BFC3-BE4D1EA068E5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GmoLoader</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BEE0E5E8-E0D5-4A2C-A9AA-6DAC0BAD4001</key>
+		<string>svn+ssh://localhost/Library/Subversion/Repository/iOS_Projects/trunk/GmoLoader</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GmoLoader.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BEE0E5E8-E0D5-4A2C-A9AA-6DAC0BAD4001</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>BEE0E5E8-E0D5-4A2C-A9AA-6DAC0BAD4001</key>
+		<string>svn+ssh://localhost/Library/Subversion/Repository/iOS_Projects</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn+ssh://localhost/Library/Subversion/Repository/iOS_Projects/trunk/GmoLoader/GmoLoader.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BEE0E5E8-E0D5-4A2C-A9AA-6DAC0BAD4001</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEE0E5E8-E0D5-4A2C-A9AA-6DAC0BAD4001</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GmoLoader</string>
+		</dict>
+	</array>
+</dict>
+</plist>

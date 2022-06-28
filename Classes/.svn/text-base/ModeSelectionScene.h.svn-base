@@ -1,0 +1,59 @@
+//
+//  ModelSelectionScene.h
+//  GmoLoader
+//
+//  Created by David Nesbitt on 9/14/10.
+//  Copyright 2010 NezSoft. All rights reserved.
+//
+
+#import "NezScene.h"
+#import "NezAnimatedModel.h"
+#import "GLSLProgram.h"
+
+@interface ModeSelectionScene : NezScene {
+	// Hold id of the framebuffer for light POV rendering
+	GLuint depthFBO;
+	
+	// Z values will be rendered to this texture when using depthFBO framebuffer
+	GLuint depthTextureId;
+	GLuint colorDepthbuffer;
+	GLuint zBuffer;
+	
+	float textureMatrix[16];
+
+	float reflectedProjectionMatrix[16];
+
+	int modelCount;
+    NezAnimatedModel **modelArray;
+	
+	int walkingIndex;
+	int animationIndex;
+	float rotationMatrix[16];
+	float nextAnimationStart;
+	float translationMatrix[16];
+	float scaleUpsideDownMatrix[16];
+	float maxX;
+	float dx, dz;
+	float rotY;
+	float distanceTravelled;
+	float distancePerFrame;
+	Vertex floorVertices[4];
+	
+	float cameraLookAtSLERPRatio;
+	float cameraPosSLERPRatio;
+	
+	vec3 currentLookAt;
+	vec3 currentTarget;
+	
+	int currentCameraMode;
+	CFTimeInterval autoCameraDelay;
+	
+	GLSLProgram *floorProgram;
+	GLSLProgram *reflectionProgram;
+
+	NezCamera *light;
+}
+
+-(void)setAutoCameraDelay:(CFTimeInterval)delay;
+
+@end

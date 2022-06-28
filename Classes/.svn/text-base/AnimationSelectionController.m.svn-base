@@ -1,0 +1,182 @@
+//
+//  AnimationSelectionController.m
+//  GmoLoader
+//
+//  Created by David Nesbitt on 9/19/10.
+//  Copyright 2010 NezSoft. All rights reserved.
+//
+
+#import "AnimationSelectionController.h"
+#import "SceneAnimationSelection.h"
+#import "NezBonedModelStructures.h"
+#import "SceneAnimationEditor.h"
+
+static int THUMBNAIL_WIDTH = 64;
+#define OVERFLOW_WIDTH 128
+
+@interface AnimationSelectionController (private)
+
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer;
+
+@end
+
+@implementation AnimationSelectionController
+
+-(id)initWithScene:(NezScene*)aScene {
+	if (self = [super initWithScene:aScene]) {
+		memset(frames, 0, sizeof(float)*RUNNING_AVERAGE_COUNT);
+		total = 0;
+		nextIndex = 0;
+	}
+	return self;
+}
+
+-(void)setView:(EAGLView*)view {
+	[super setView:view];
+	float ty = parentView.superview.transform.ty*2;
+	fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -ty, scaledScreenWidth, 15.0)];
+	fpsLabel.textColor = [UIColor whiteColor];
+	fpsLabel.backgroundColor = [UIColor blackColor];
+	fpsLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(12.0)];
+	fpsLabel.text = @"--";	
+	[view addSubview:fpsLabel];
+	THUMBNAIL_WIDTH = scaledScreenWidth/3;
+
+	UIButton *sceneButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	sceneButton.frame = CGRectMake(20, 20-ty, 100, 30);
+	[sceneButton setTitle:@"Edit" forState:UIControlStateNormal];
+	[sceneButton addTarget:self action:@selector(editButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+	[view addSubview:sceneButton];
+}
+
+-(void)editButtonAction:(UIButton*)sender {
+	NSString *nextSceneName = [SceneAnimationEditor getSceneName];
+	id nextSceneArgs = [scene getNextSceneArguments:nextSceneName];
+	[parentView changeScenes:nextSceneName WithArguments:nextSceneArgs];
+}
+
+-(void)setAnimationCount:(int)count {
+	animationCount = count;
+	barWidth = animationCount*THUMBNAIL_WIDTH;
+	smallestX = screenWidth-barWidth;
+	if (smallestX > 0) {
+		smallestX = 0;
+	}
+}
+
+-(void)updateWithFramesElapsed:(float)framesElapsed {
+	float fps = THIRTY_FRAMES_PER_SECOND/framesElapsed;
+	total -=  frames[nextIndex];
+	frames[nextIndex] = fps;
+	total +=  fps;
+	nextIndex = (nextIndex+1)%RUNNING_AVERAGE_COUNT;
+	
+	fpsLabel.text = [NSString stringWithFormat: @"fps:%.3f average:%.3f", THIRTY_FRAMES_PER_SECOND/framesElapsed, total/RUNNING_AVERAGE_COUNT];
+	
+	if (velocity != 0) {
+		smallViewPortX += velocity;
+		[(SceneAnimationSelection*)scene setListPosition:smallViewPortX];
+		if (velocity > 0) {
+			velocity-=2;
+			if (velocity < 0) {
+				velocity = 0;
+			}
+			if (smallViewPortX > 0) {
+				velocity = -15;
+			}
+		}
+		if (velocity < 0) {
+			velocity+=2;
+			if (velocity > 0) {
+				velocity = 0;
+			}
+			if (smallViewPortX < smallestX) {
+				velocity = 15;
+			}
+		}
+	}
+	
+	[scene updateWithFramesElapsed:framesElapsed];
+}	
+
+-(BOOL)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
+	UITouch *touch = [touches anyObject];
+	CGPoint touchPoint = [touch locationInView:touch.view];
+	touchDownX = touchPoint.x;
+	touchDownY = touchPoint.y;
+	downViewPortX = smallViewPortX;
+	velocity = 0;
+	moved = NO;
+	return YES;
+}
+
+-(BOOL)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event {
+	UITouch *touch = [touches anyObject];
+	CGPoint touchPoint = [touch locationInView:touch.view];
+
+	if (touchDownY > screenHeight-THUMBNAIL_WIDTH) {
+		
+		smallViewPortX = downViewPortX + (touchPoint.x-touchDownX);
+		if (smallViewPortX < smallestX-OVERFLOW_WIDTH) {
+			smallViewPortX = smallestX-OVERFLOW_WIDTH;
+		} else if (smallViewPortX > OVERFLOW_WIDTH) {
+			smallViewPortX = OVERFLOW_WIDTH;
+		}
+		[(SceneAnimationSelection*)scene setListPosition:smallViewPortX];
+	}
+	moved = YES;
+	return YES;
+}
+
+-(BOOL)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event {
+	if (touchDownY > screenHeight-THUMBNAIL_WIDTH) {
+		if (moved == NO) {
+			int x=smallViewPortX;
+			for (int i=0; i<animationCount; i++) {
+				if (x > -THUMBNAIL_WIDTH) {
+					if (touchDownX >= x && touchDownX < (x+THUMBNAIL_WIDTH)) {
+						[(SceneAnimationSelection*)scene setSelectedModel:i];
+						return YES;
+					}
+				}
+				x += THUMBNAIL_WIDTH;
+			}
+		}
+		if (smallViewPortX < smallestX) {
+			velocity = 15;
+		} else if (smallViewPortX > 0) {
+			velocity = -15;
+		} else {
+			UITouch *touch = [touches anyObject];
+			CGPoint touchPoint = [touch locationInView:touch.view];
+			CGPoint prevTouchPoint = [touch previousLocationInView:touch.view];
+			float dx = (touchPoint.x-prevTouchPoint.x)*2;
+			if (dx > 0) {
+				if (dx > 50) {
+					velocity = 50;
+				} else {
+					velocity = dx;
+				}
+			} else if (dx < 0) {
+				if (dx < -50) {
+					velocity = -50;
+				} else {
+					velocity = dx;
+				}
+			}
+		}
+	} else if (moved == NO) {
+		[(SceneAnimationSelection*)scene toggleList];
+	}
+	return YES;
+}
+
+-(void)invalidate {
+	[fpsLabel removeFromSuperview];
+	[fpsLabel release];
+	fpsLabel = nil;
+
+	[super invalidate];
+}
+
+@end

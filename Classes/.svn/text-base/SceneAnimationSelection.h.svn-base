@@ -1,0 +1,28 @@
+//
+//  SceneAnimationSelection.h
+//  GmoLoader
+//
+//  Created by David Nesbitt on 9/7/10.
+//  Copyright 2010 NezSoft. All rights reserved.
+//
+
+#import "NezScene.h"
+#import "NezHaloModel.h"
+
+@interface SceneAnimationSelection : NezScene {
+	float smallViewProjMat[16];
+	
+	NezAnimatedModel *mainModel;
+	NezHaloModel **modelAnimationArray;
+	int animationCount;
+	int selectedModelIndex;
+	float smallViewPortX;
+	BOOL showList;
+	NSString *modelName;
+}
+
+-(void)setSelectedModel:(int)index;
+-(void)toggleList;
+-(void)setListPosition:(float)x;
+
+@end

@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* GmoLoaderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* GmoLoaderAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2514C27310084DB100A42282 /* ES2Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2514C27010084DB100A42282 /* ES2Renderer.m */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.m */; };
+		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		630BD327123633B8001B710F /* SceneAnimationSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 630BD326123633B8001B710F /* SceneAnimationSelection.m */; };
+		630BD32A12363499001B710F /* NezScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 630BD32912363499001B710F /* NezScene.m */; };
+		6312485112250BA30059A35A /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 6312485012250BA30059A35A /* matrix.c */; };
+		6313AC8C1231EDAE0035BAC3 /* TextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6313AC8B1231EDAE0035BAC3 /* TextureManager.m */; };
+		632B6B491244D7590092EB87 /* ZoomRotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 632B6B481244D7590092EB87 /* ZoomRotationController.m */; };
+		6330ADB4122EA9C800E098F9 /* NezBonedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330ADB3122EA9C800E098F9 /* NezBonedModel.m */; };
+		6330ADF6122F5AA900E098F9 /* GLSLProgramManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6330ADF5122F5AA900E098F9 /* GLSLProgramManager.m */; };
+		63409BDF125EE1E900BB700C /* NezController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63409BDE125EE1E900BB700C /* NezController.m */; };
+		6349D201125AED04004B1969 /* ModelNameAniIndexHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349D200125AED04004B1969 /* ModelNameAniIndexHolder.m */; };
+		6349D2B8125B1389004B1969 /* NezPlaybackBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349D2B7125B1389004B1969 /* NezPlaybackBar.m */; };
+		6349D2BC125B13AE004B1969 /* NezPlaybackBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6349D2BB125B13AE004B1969 /* NezPlaybackBarController.m */; };
+		6349D333125B25FB004B1969 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6349D332125B25FB004B1969 /* CoreGraphics.framework */; };
+		636B97EE123E461A00640E7B /* NezHaloModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B97ED123E461A00640E7B /* NezHaloModel.m */; };
+		636B983E123E4F7100640E7B /* GMO in Resources */ = {isa = PBXBuildFile; fileRef = 636B9812123E4F7100640E7B /* GMO */; };
+		636B983F123E4F7100640E7B /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 636B981C123E4F7100640E7B /* Icons */; };
+		636B9840123E4F7100640E7B /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 636B981F123E4F7100640E7B /* Models */; };
+		636B9841123E4F7100640E7B /* Shaders in Resources */ = {isa = PBXBuildFile; fileRef = 636B9836123E4F7100640E7B /* Shaders */; };
+		637AFB431224437D006EC906 /* SceneCrystalWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 637AFB2D1224437C006EC906 /* SceneCrystalWorld.m */; };
+		637AFB451224437D006EC906 /* DataResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 637AFB331224437C006EC906 /* DataResourceManager.m */; };
+		637AFB471224437D006EC906 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 637AFB391224437C006EC906 /* Math.m */; };
+		637AFB481224437D006EC906 /* GmoModelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 637AFB3E1224437C006EC906 /* GmoModelLoader.m */; };
+		637AFB491224437D006EC906 /* GmoDataStructures.m in Sources */ = {isa = PBXBuildFile; fileRef = 637AFB401224437C006EC906 /* GmoDataStructures.m */; };
+		637AFB4A1224437D006EC906 /* GimDataStructures.m in Sources */ = {isa = PBXBuildFile; fileRef = 637AFB421224437D006EC906 /* GimDataStructures.m */; };
+		6396FC0E1248504100593EBF /* SceneAnimationEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396FC0D1248504100593EBF /* SceneAnimationEditor.m */; };
+		6396FC111248505B00593EBF /* AnimationEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396FC101248505B00593EBF /* AnimationEditorController.m */; };
+		63C905B912422DBF00058468 /* GLSLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C905B812422DBF00058468 /* GLSLProgram.m */; };
+		63D6BA6412713ED2009C6FF6 /* NezModeSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BA6212713ED2009C6FF6 /* NezModeSelectionController.m */; };
+		63D6BA6512713ED2009C6FF6 /* NezModeSelectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D6BA6312713ED2009C6FF6 /* NezModeSelectionController.xib */; };
+		63D6BA9712714551009C6FF6 /* NezModeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BA9612714551009C6FF6 /* NezModeSelectionView.m */; };
+		63D6BABA1271476F009C6FF6 /* NezBaseSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BAB91271476F009C6FF6 /* NezBaseSceneView.m */; };
+		63D6BAE6127154F0009C6FF6 /* NezAnimationSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BAE5127154F0009C6FF6 /* NezAnimationSelectionView.m */; };
+		63D6BAEA127154FD009C6FF6 /* NezAnimationSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BAE8127154FD009C6FF6 /* NezAnimationSelectionController.m */; };
+		63D6BAEB127154FD009C6FF6 /* NezAnimationSelectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D6BAE9127154FD009C6FF6 /* NezAnimationSelectionController.xib */; };
+		63D6BC7912716FA8009C6FF6 /* NezCrystalWorldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BC7812716FA8009C6FF6 /* NezCrystalWorldView.m */; };
+		63D6BC7D12716FB8009C6FF6 /* NezCrystalWorldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BC7B12716FB8009C6FF6 /* NezCrystalWorldController.m */; };
+		63D6BC7E12716FB8009C6FF6 /* NezCrystalWorldController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D6BC7C12716FB8009C6FF6 /* NezCrystalWorldController.xib */; };
+		63D6BCC812717641009C6FF6 /* NezZoomRotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BCC712717641009C6FF6 /* NezZoomRotationView.m */; };
+		63D8B03B127264CD00E7F8D1 /* NezBaseSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8B03A127264CD00E7F8D1 /* NezBaseSceneController.m */; };
+		63DD51ED124517C70028ED64 /* NezSceneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD51EC124517C70028ED64 /* NezSceneController.m */; };
+		63DD527A12451E820028ED64 /* AnimationSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD527912451E820028ED64 /* AnimationSelectionController.m */; };
+		63DD527F1245210B0028ED64 /* ModeSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD527E1245210B0028ED64 /* ModeSelectionController.m */; };
+		63DD5294124523480028ED64 /* CrystalWorldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD5293124523480028ED64 /* CrystalWorldController.m */; };
+		63E0AE8E1225709700C0A940 /* NezCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AE8D1225709700C0A940 /* NezCamera.m */; };
+		63E5708C1237482E0089E49B /* NezSceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E5708B1237482E0089E49B /* NezSceneManager.m */; };
+		63E5716C12375D1D0089E49B /* NezAnimatedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E5716B12375D1D0089E49B /* NezAnimatedModel.m */; };
+		63E572861237848A0089E49B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63E572851237848A0089E49B /* Icon.png */; };
+		63E5BF59127429E1004C2EC5 /* NezUIToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E5BF58127429E1004C2EC5 /* NezUIToolbar.m */; };
+		63F04C62123A2DD200E54284 /* GL_HALF_FLOAT_OES.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F04C61123A2DD200E54284 /* GL_HALF_FLOAT_OES.m */; };
+		63F7894E123F9B770015A10F /* ModeSelectionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7894D123F9B770015A10F /* ModeSelectionScene.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* GmoLoaderAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GmoLoaderAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* GmoLoaderAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GmoLoaderAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* GmoLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GmoLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2514C26F10084DB100A42282 /* ES2Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ES2Renderer.h; sourceTree = "<group>"; };
+		2514C27010084DB100A42282 /* ES2Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ES2Renderer.m; sourceTree = "<group>"; };
+		2514C27110084DB100A42282 /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28FD14FC0DC6FC130079059D /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		28FD14FD0DC6FC130079059D /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* GmoLoader_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GmoLoader_Prefix.pch; sourceTree = "<group>"; };
+		630BD1B11236042E001B710F /* NezBonedModelStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezBonedModelStructures.h; sourceTree = "<group>"; };
+		630BD325123633B8001B710F /* SceneAnimationSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneAnimationSelection.h; sourceTree = "<group>"; };
+		630BD326123633B8001B710F /* SceneAnimationSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneAnimationSelection.m; sourceTree = "<group>"; };
+		630BD32812363499001B710F /* NezScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezScene.h; sourceTree = "<group>"; };
+		630BD32912363499001B710F /* NezScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezScene.m; sourceTree = "<group>"; };
+		6312484F12250BA30059A35A /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		6312485012250BA30059A35A /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		6313AC8A1231EDAE0035BAC3 /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
+		6313AC8B1231EDAE0035BAC3 /* TextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureManager.m; sourceTree = "<group>"; };
+		632B6B471244D7590092EB87 /* ZoomRotationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomRotationController.h; sourceTree = "<group>"; };
+		632B6B481244D7590092EB87 /* ZoomRotationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomRotationController.m; sourceTree = "<group>"; };
+		6330ADB2122EA9C800E098F9 /* NezBonedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezBonedModel.h; sourceTree = "<group>"; };
+		6330ADB3122EA9C800E098F9 /* NezBonedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezBonedModel.m; sourceTree = "<group>"; };
+		6330ADF4122F5AA900E098F9 /* GLSLProgramManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSLProgramManager.h; sourceTree = "<group>"; };
+		6330ADF5122F5AA900E098F9 /* GLSLProgramManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSLProgramManager.m; sourceTree = "<group>"; };
+		63409BDD125EE1E900BB700C /* NezController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezController.h; sourceTree = "<group>"; };
+		63409BDE125EE1E900BB700C /* NezController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezController.m; sourceTree = "<group>"; };
+		63409C89125EECDD00BB700C /* NezPlaybackBarControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezPlaybackBarControllerDelegate.h; sourceTree = "<group>"; };
+		6349D1FF125AED04004B1969 /* ModelNameAniIndexHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelNameAniIndexHolder.h; sourceTree = "<group>"; };
+		6349D200125AED04004B1969 /* ModelNameAniIndexHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelNameAniIndexHolder.m; sourceTree = "<group>"; };
+		6349D2B6125B1389004B1969 /* NezPlaybackBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezPlaybackBar.h; sourceTree = "<group>"; };
+		6349D2B7125B1389004B1969 /* NezPlaybackBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezPlaybackBar.m; sourceTree = "<group>"; };
+		6349D2BA125B13AE004B1969 /* NezPlaybackBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezPlaybackBarController.h; sourceTree = "<group>"; };
+		6349D2BB125B13AE004B1969 /* NezPlaybackBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezPlaybackBarController.m; sourceTree = "<group>"; };
+		6349D332125B25FB004B1969 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		636B97EC123E461A00640E7B /* NezHaloModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezHaloModel.h; sourceTree = "<group>"; };
+		636B97ED123E461A00640E7B /* NezHaloModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezHaloModel.m; sourceTree = "<group>"; };
+		636B9812123E4F7100640E7B /* GMO */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GMO; path = Resources/GMO; sourceTree = "<group>"; };
+		636B981C123E4F7100640E7B /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = Resources/Icons; sourceTree = "<group>"; };
+		636B981F123E4F7100640E7B /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = Resources/Models; sourceTree = "<group>"; };
+		636B9836123E4F7100640E7B /* Shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Shaders; path = Resources/Shaders; sourceTree = "<group>"; };
+		637AFB2C1224437C006EC906 /* SceneCrystalWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneCrystalWorld.h; sourceTree = "<group>"; };
+		637AFB2D1224437C006EC906 /* SceneCrystalWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneCrystalWorld.m; sourceTree = "<group>"; };
+		637AFB321224437C006EC906 /* DataResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataResourceManager.h; sourceTree = "<group>"; };
+		637AFB331224437C006EC906 /* DataResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataResourceManager.m; sourceTree = "<group>"; };
+		637AFB381224437C006EC906 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		637AFB391224437C006EC906 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
+		637AFB3B1224437C006EC906 /* NezModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezModelLoader.h; sourceTree = "<group>"; };
+		637AFB3D1224437C006EC906 /* GmoModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GmoModelLoader.h; sourceTree = "<group>"; };
+		637AFB3E1224437C006EC906 /* GmoModelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GmoModelLoader.m; sourceTree = "<group>"; };
+		637AFB3F1224437C006EC906 /* GmoDataStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GmoDataStructures.h; sourceTree = "<group>"; };
+		637AFB401224437C006EC906 /* GmoDataStructures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GmoDataStructures.m; sourceTree = "<group>"; };
+		637AFB411224437C006EC906 /* GimDataStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GimDataStructures.h; sourceTree = "<group>"; };
+		637AFB421224437D006EC906 /* GimDataStructures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GimDataStructures.m; sourceTree = "<group>"; };
+		6396FC0C1248504100593EBF /* SceneAnimationEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneAnimationEditor.h; sourceTree = "<group>"; };
+		6396FC0D1248504100593EBF /* SceneAnimationEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneAnimationEditor.m; sourceTree = "<group>"; };
+		6396FC0F1248505B00593EBF /* AnimationEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationEditorController.h; sourceTree = "<group>"; };
+		6396FC101248505B00593EBF /* AnimationEditorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationEditorController.m; sourceTree = "<group>"; };
+		63C905B712422DBF00058468 /* GLSLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSLProgram.h; sourceTree = "<group>"; };
+		63C905B812422DBF00058468 /* GLSLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSLProgram.m; sourceTree = "<group>"; };
+		63D6BA6112713ED2009C6FF6 /* NezModeSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezModeSelectionController.h; sourceTree = "<group>"; };
+		63D6BA6212713ED2009C6FF6 /* NezModeSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezModeSelectionController.m; sourceTree = "<group>"; };
+		63D6BA6312713ED2009C6FF6 /* NezModeSelectionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NezModeSelectionController.xib; sourceTree = "<group>"; };
+		63D6BA9512714551009C6FF6 /* NezModeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezModeSelectionView.h; sourceTree = "<group>"; };
+		63D6BA9612714551009C6FF6 /* NezModeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezModeSelectionView.m; sourceTree = "<group>"; };
+		63D6BAB81271476F009C6FF6 /* NezBaseSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezBaseSceneView.h; sourceTree = "<group>"; };
+		63D6BAB91271476F009C6FF6 /* NezBaseSceneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezBaseSceneView.m; sourceTree = "<group>"; };
+		63D6BAE4127154F0009C6FF6 /* NezAnimationSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezAnimationSelectionView.h; sourceTree = "<group>"; };
+		63D6BAE5127154F0009C6FF6 /* NezAnimationSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezAnimationSelectionView.m; sourceTree = "<group>"; };
+		63D6BAE7127154FD009C6FF6 /* NezAnimationSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezAnimationSelectionController.h; sourceTree = "<group>"; };
+		63D6BAE8127154FD009C6FF6 /* NezAnimationSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezAnimationSelectionController.m; sourceTree = "<group>"; };
+		63D6BAE9127154FD009C6FF6 /* NezAnimationSelectionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NezAnimationSelectionController.xib; sourceTree = "<group>"; };
+		63D6BC7712716FA8009C6FF6 /* NezCrystalWorldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezCrystalWorldView.h; sourceTree = "<group>"; };
+		63D6BC7812716FA8009C6FF6 /* NezCrystalWorldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezCrystalWorldView.m; sourceTree = "<group>"; };
+		63D6BC7A12716FB8009C6FF6 /* NezCrystalWorldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezCrystalWorldController.h; sourceTree = "<group>"; };
+		63D6BC7B12716FB8009C6FF6 /* NezCrystalWorldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezCrystalWorldController.m; sourceTree = "<group>"; };
+		63D6BC7C12716FB8009C6FF6 /* NezCrystalWorldController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NezCrystalWorldController.xib; sourceTree = "<group>"; };
+		63D6BCC612717641009C6FF6 /* NezZoomRotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezZoomRotationView.h; sourceTree = "<group>"; };
+		63D6BCC712717641009C6FF6 /* NezZoomRotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezZoomRotationView.m; sourceTree = "<group>"; };
+		63D8B039127264CD00E7F8D1 /* NezBaseSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezBaseSceneController.h; sourceTree = "<group>"; };
+		63D8B03A127264CD00E7F8D1 /* NezBaseSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezBaseSceneController.m; sourceTree = "<group>"; };
+		63DD51EB124517C70028ED64 /* NezSceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezSceneController.h; sourceTree = "<group>"; };
+		63DD51EC124517C70028ED64 /* NezSceneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezSceneController.m; sourceTree = "<group>"; };
+		63DD527812451E820028ED64 /* AnimationSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationSelectionController.h; sourceTree = "<group>"; };
+		63DD527912451E820028ED64 /* AnimationSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationSelectionController.m; sourceTree = "<group>"; };
+		63DD527D1245210B0028ED64 /* ModeSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeSelectionController.h; sourceTree = "<group>"; };
+		63DD527E1245210B0028ED64 /* ModeSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeSelectionController.m; sourceTree = "<group>"; };
+		63DD5292124523480028ED64 /* CrystalWorldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrystalWorldController.h; sourceTree = "<group>"; };
+		63DD5293124523480028ED64 /* CrystalWorldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrystalWorldController.m; sourceTree = "<group>"; };
+		63E0AE8C1225709700C0A940 /* NezCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezCamera.h; sourceTree = "<group>"; };
+		63E0AE8D1225709700C0A940 /* NezCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezCamera.m; sourceTree = "<group>"; };
+		63E5708A1237482E0089E49B /* NezSceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezSceneManager.h; sourceTree = "<group>"; };
+		63E5708B1237482E0089E49B /* NezSceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezSceneManager.m; sourceTree = "<group>"; };
+		63E5716A12375D1D0089E49B /* NezAnimatedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezAnimatedModel.h; sourceTree = "<group>"; };
+		63E5716B12375D1D0089E49B /* NezAnimatedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezAnimatedModel.m; sourceTree = "<group>"; };
+		63E572851237848A0089E49B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		63E5BF57127429E1004C2EC5 /* NezUIToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NezUIToolbar.h; sourceTree = "<group>"; };
+		63E5BF58127429E1004C2EC5 /* NezUIToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NezUIToolbar.m; sourceTree = "<group>"; };
+		63F04C60123A2DD200E54284 /* GL_HALF_FLOAT_OES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GL_HALF_FLOAT_OES.h; sourceTree = "<group>"; };
+		63F04C61123A2DD200E54284 /* GL_HALF_FLOAT_OES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GL_HALF_FLOAT_OES.m; sourceTree = "<group>"; };
+		63F7894C123F9B770015A10F /* ModeSelectionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeSelectionScene.h; sourceTree = "<group>"; };
+		63F7894D123F9B770015A10F /* ModeSelectionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeSelectionScene.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* GmoLoader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GmoLoader-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				6349D333125B25FB004B1969 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63F04C5E123A2DB000E54284 /* GL_HALF_FLOAT_OES */,
+				6330AE0A122F616B00E098F9 /* Shaders */,
+				63E0AE901225709B00C0A940 /* Camera */,
+				637AFB3A1224437C006EC906 /* ModelLoaders */,
+				637AFB371224437C006EC906 /* Math */,
+				637AFB311224437C006EC906 /* ResourceManagement */,
+				6349D2B5125B1367004B1969 /* NezDrawable */,
+				6349D2B9125B1398004B1969 /* NezControllers */,
+				637AFB2E1224437C006EC906 /* NezModel */,
+				637AFB2B1224437C006EC906 /* Scenes */,
+				632B6B451244D72B0092EB87 /* SceneController */,
+				63D6BA921271449E009C6FF6 /* Scene */,
+				2514C26F10084DB100A42282 /* ES2Renderer.h */,
+				2514C27010084DB100A42282 /* ES2Renderer.m */,
+				2514C27110084DB100A42282 /* ESRenderer.h */,
+				28FD14FC0DC6FC130079059D /* EAGLView.h */,
+				28FD14FD0DC6FC130079059D /* EAGLView.m */,
+				1D3623240D0F684500981E51 /* GmoLoaderAppDelegate.h */,
+				1D3623250D0F684500981E51 /* GmoLoaderAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* GmoLoader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* GmoLoader_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				636B9812123E4F7100640E7B /* GMO */,
+				636B981C123E4F7100640E7B /* Icons */,
+				636B981F123E4F7100640E7B /* Models */,
+				636B9836123E4F7100640E7B /* Shaders */,
+				63E572851237848A0089E49B /* Icon.png */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* GmoLoader-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				6349D332125B25FB004B1969 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		632B6B451244D72B0092EB87 /* SceneController */ = {
+			isa = PBXGroup;
+			children = (
+				63DD51EB124517C70028ED64 /* NezSceneController.h */,
+				63DD51EC124517C70028ED64 /* NezSceneController.m */,
+				632B6B471244D7590092EB87 /* ZoomRotationController.h */,
+				632B6B481244D7590092EB87 /* ZoomRotationController.m */,
+				63DD5292124523480028ED64 /* CrystalWorldController.h */,
+				63DD5293124523480028ED64 /* CrystalWorldController.m */,
+				63DD527812451E820028ED64 /* AnimationSelectionController.h */,
+				63DD527912451E820028ED64 /* AnimationSelectionController.m */,
+				63DD527D1245210B0028ED64 /* ModeSelectionController.h */,
+				63DD527E1245210B0028ED64 /* ModeSelectionController.m */,
+				6396FC0F1248505B00593EBF /* AnimationEditorController.h */,
+				6396FC101248505B00593EBF /* AnimationEditorController.m */,
+			);
+			name = SceneController;
+			sourceTree = "<group>";
+		};
+		6330AE0A122F616B00E098F9 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				63C905B712422DBF00058468 /* GLSLProgram.h */,
+				63C905B812422DBF00058468 /* GLSLProgram.m */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		6349D2B5125B1367004B1969 /* NezDrawable */ = {
+			isa = PBXGroup;
+			children = (
+				6349D2B6125B1389004B1969 /* NezPlaybackBar.h */,
+				6349D2B7125B1389004B1969 /* NezPlaybackBar.m */,
+			);
+			name = NezDrawable;
+			sourceTree = "<group>";
+		};
+		6349D2B9125B1398004B1969 /* NezControllers */ = {
+			isa = PBXGroup;
+			children = (
+				63409BDD125EE1E900BB700C /* NezController.h */,
+				63409BDE125EE1E900BB700C /* NezController.m */,
+				6349D2BA125B13AE004B1969 /* NezPlaybackBarController.h */,
+				6349D2BB125B13AE004B1969 /* NezPlaybackBarController.m */,
+				63409C89125EECDD00BB700C /* NezPlaybackBarControllerDelegate.h */,
+			);
+			name = NezControllers;
+			sourceTree = "<group>";
+		};
+		637AFB2B1224437C006EC906 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				63E5708A1237482E0089E49B /* NezSceneManager.h */,
+				63E5708B1237482E0089E49B /* NezSceneManager.m */,
+				630BD32812363499001B710F /* NezScene.h */,
+				630BD32912363499001B710F /* NezScene.m */,
+				637AFB2C1224437C006EC906 /* SceneCrystalWorld.h */,
+				637AFB2D1224437C006EC906 /* SceneCrystalWorld.m */,
+				630BD325123633B8001B710F /* SceneAnimationSelection.h */,
+				630BD326123633B8001B710F /* SceneAnimationSelection.m */,
+				63F7894C123F9B770015A10F /* ModeSelectionScene.h */,
+				63F7894D123F9B770015A10F /* ModeSelectionScene.m */,
+				6396FC0C1248504100593EBF /* SceneAnimationEditor.h */,
+				6396FC0D1248504100593EBF /* SceneAnimationEditor.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		637AFB2E1224437C006EC906 /* NezModel */ = {
+			isa = PBXGroup;
+			children = (
+				630BD1B11236042E001B710F /* NezBonedModelStructures.h */,
+				6330ADB2122EA9C800E098F9 /* NezBonedModel.h */,
+				6330ADB3122EA9C800E098F9 /* NezBonedModel.m */,
+				63E5716A12375D1D0089E49B /* NezAnimatedModel.h */,
+				63E5716B12375D1D0089E49B /* NezAnimatedModel.m */,
+				636B97EC123E461A00640E7B /* NezHaloModel.h */,
+				636B97ED123E461A00640E7B /* NezHaloModel.m */,
+				6349D1FF125AED04004B1969 /* ModelNameAniIndexHolder.h */,
+				6349D200125AED04004B1969 /* ModelNameAniIndexHolder.m */,
+			);
+			name = NezModel;
+			sourceTree = "<group>";
+		};
+		637AFB311224437C006EC906 /* ResourceManagement */ = {
+			isa = PBXGroup;
+			children = (
+				637AFB321224437C006EC906 /* DataResourceManager.h */,
+				637AFB331224437C006EC906 /* DataResourceManager.m */,
+				6330ADF4122F5AA900E098F9 /* GLSLProgramManager.h */,
+				6330ADF5122F5AA900E098F9 /* GLSLProgramManager.m */,
+				6313AC8A1231EDAE0035BAC3 /* TextureManager.h */,
+				6313AC8B1231EDAE0035BAC3 /* TextureManager.m */,
+			);
+			name = ResourceManagement;
+			sourceTree = "<group>";
+		};
+		637AFB371224437C006EC906 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				637AFB381224437C006EC906 /* Math.h */,
+				637AFB391224437C006EC906 /* Math.m */,
+				6312484F12250BA30059A35A /* matrix.h */,
+				6312485012250BA30059A35A /* matrix.c */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+		637AFB3A1224437C006EC906 /* ModelLoaders */ = {
+			isa = PBXGroup;
+			children = (
+				637AFB3C1224437C006EC906 /* GMO */,
+				637AFB3B1224437C006EC906 /* NezModelLoader.h */,
+			);
+			name = ModelLoaders;
+			sourceTree = "<group>";
+		};
+		637AFB3C1224437C006EC906 /* GMO */ = {
+			isa = PBXGroup;
+			children = (
+				637AFB3D1224437C006EC906 /* GmoModelLoader.h */,
+				637AFB3E1224437C006EC906 /* GmoModelLoader.m */,
+				637AFB3F1224437C006EC906 /* GmoDataStructures.h */,
+				637AFB401224437C006EC906 /* GmoDataStructures.m */,
+				637AFB411224437C006EC906 /* GimDataStructures.h */,
+				637AFB421224437D006EC906 /* GimDataStructures.m */,
+			);
+			name = GMO;
+			sourceTree = "<group>";
+		};
+		63D6BA6612713F10009C6FF6 /* NezModeSelection */ = {
+			isa = PBXGroup;
+			children = (
+				63D6BA9512714551009C6FF6 /* NezModeSelectionView.h */,
+				63D6BA9612714551009C6FF6 /* NezModeSelectionView.m */,
+				63D6BA6112713ED2009C6FF6 /* NezModeSelectionController.h */,
+				63D6BA6212713ED2009C6FF6 /* NezModeSelectionController.m */,
+				63D6BA6312713ED2009C6FF6 /* NezModeSelectionController.xib */,
+			);
+			name = NezModeSelection;
+			sourceTree = "<group>";
+		};
+		63D6BA921271449E009C6FF6 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				63D6BAB712714741009C6FF6 /* NezBaseScene */,
+				63D6BA6612713F10009C6FF6 /* NezModeSelection */,
+				63D6BAE3127154C1009C6FF6 /* NezAnimationSelection */,
+				63D6BC7312716F39009C6FF6 /* NezCrystalWorld */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		63D6BAB712714741009C6FF6 /* NezBaseScene */ = {
+			isa = PBXGroup;
+			children = (
+				63D6BAB81271476F009C6FF6 /* NezBaseSceneView.h */,
+				63D6BAB91271476F009C6FF6 /* NezBaseSceneView.m */,
+				63D8B039127264CD00E7F8D1 /* NezBaseSceneController.h */,
+				63D8B03A127264CD00E7F8D1 /* NezBaseSceneController.m */,
+				63D6BCC612717641009C6FF6 /* NezZoomRotationView.h */,
+				63D6BCC712717641009C6FF6 /* NezZoomRotationView.m */,
+				63E5BF57127429E1004C2EC5 /* NezUIToolbar.h */,
+				63E5BF58127429E1004C2EC5 /* NezUIToolbar.m */,
+			);
+			name = NezBaseScene;
+			sourceTree = "<group>";
+		};
+		63D6BAE3127154C1009C6FF6 /* NezAnimationSelection */ = {
+			isa = PBXGroup;
+			children = (
+				63D6BAE4127154F0009C6FF6 /* NezAnimationSelectionView.h */,
+				63D6BAE5127154F0009C6FF6 /* NezAnimationSelectionView.m */,
+				63D6BAE7127154FD009C6FF6 /* NezAnimationSelectionController.h */,
+				63D6BAE8127154FD009C6FF6 /* NezAnimationSelectionController.m */,
+				63D6BAE9127154FD009C6FF6 /* NezAnimationSelectionController.xib */,
+			);
+			name = NezAnimationSelection;
+			sourceTree = "<group>";
+		};
+		63D6BC7312716F39009C6FF6 /* NezCrystalWorld */ = {
+			isa = PBXGroup;
+			children = (
+				63D6BC7712716FA8009C6FF6 /* NezCrystalWorldView.h */,
+				63D6BC7812716FA8009C6FF6 /* NezCrystalWorldView.m */,
+				63D6BC7A12716FB8009C6FF6 /* NezCrystalWorldController.h */,
+				63D6BC7B12716FB8009C6FF6 /* NezCrystalWorldController.m */,
+				63D6BC7C12716FB8009C6FF6 /* NezCrystalWorldController.xib */,
+			);
+			name = NezCrystalWorld;
+			sourceTree = "<group>";
+		};
+		63E0AE901225709B00C0A940 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				63E0AE8C1225709700C0A940 /* NezCamera.h */,
+				63E0AE8D1225709700C0A940 /* NezCamera.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		63F04C5E123A2DB000E54284 /* GL_HALF_FLOAT_OES */ = {
+			isa = PBXGroup;
+			children = (
+				63F04C60123A2DD200E54284 /* GL_HALF_FLOAT_OES.h */,
+				63F04C61123A2DD200E54284 /* GL_HALF_FLOAT_OES.m */,
+			);
+			name = GL_HALF_FLOAT_OES;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* GmoLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "GmoLoader" */;
+			buildPhases = (
+				63C904DF1241FC5200058468 /* Make GLSL Class */,
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GmoLoader;
+			productName = GmoLoader;
+			productReference = 1D6058910D05DD3D006BFB54 /* GmoLoader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				ORGANIZATIONNAME = NezSoft;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GmoLoader" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* GmoLoader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				63E572861237848A0089E49B /* Icon.png in Resources */,
+				636B983E123E4F7100640E7B /* GMO in Resources */,
+				636B983F123E4F7100640E7B /* Icons in Resources */,
+				636B9840123E4F7100640E7B /* Models in Resources */,
+				636B9841123E4F7100640E7B /* Shaders in Resources */,
+				63D6BA6512713ED2009C6FF6 /* NezModeSelectionController.xib in Resources */,
+				63D6BAEB127154FD009C6FF6 /* NezAnimationSelectionController.xib in Resources */,
+				63D6BC7E12716FB8009C6FF6 /* NezCrystalWorldController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63C904DF1241FC5200058468 /* Make GLSL Class */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Make GLSL Class";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env ruby";
+			shellScript = "ahash = Hash.new\nuhash = Hash.new\nDir.chdir(\"Resources/Shaders\")\nDir.glob('*.[fv]sh') do |fname|\n\tFile.new(fname, \"r\").each { |line| \n\t\tif line =~ /.*attribute.*/\n\t\t\tline =~ %r{\\b(\\w*)\\;}\n\t\t\tahash[$1] = $1\n\t\tend\n\t\tif line =~ /.*uniform.*/\n\t\t\tif line =~ /\\b(\\w*)\\;/\n\t\t\t\tuhash[$1] = $1\n\t\t\telse \n\t\t\t\tif line =~ /\\b(\\w*)\\[.*\\;/\n\t\t\t\t\tuhash[$1] = $1+\"[0]\"\n\t\t\t\tend\n\t\t\tend\n\t\tend\n\t}\nend\n\nFile.open('../../Classes/GLSLProgram.h', 'w') do |f2|  \n  f2.puts \"//\"\n  f2.puts \"//  GLSLProgram.h\"\n  f2.puts \"//  GmoLoader\"\n  f2.puts \"//\"\n  f2.puts \"//  Created by David Nesbitt on 9/2/10.\"\n  f2.puts \"//  Copyright 2010 __MyCompanyName__. All rights reserved.\"\n  f2.puts \"//\\n\\n\"\n  f2.puts \"#import <OpenGLES/ES2/gl.h>\"\n  f2.puts \"#import <OpenGLES/ES2/glext.h>\\n\\n\"\n  f2.puts \"#define MAX_NAME_LENGTH 32\\n\\n\"\n  f2.puts \"@interface GLSLProgram : NSObject {\"\n  f2.puts \"@public\"\n  f2.puts \"\tGLuint program;\"\n  ahash.each_key {|key| f2.puts \"\tGLint \"+key+\";\" }\n  uhash.each_key {|key| f2.puts \"\tGLint \"+key+\";\" }\n  f2.puts \"}\\n\\n\"\n  f2.puts \"- (id)initWithProgramName:(NSString*)programName;\\n\\n\"\n  f2.puts \"@end\"\n  f2.puts \"\"\nend  \n\nFile.open('../../Classes/GLSLProgram.m', 'w') do |f2|  \n  f2.puts \"//\"\n  f2.puts \"//  GLSLProgram.m\"\n  f2.puts \"//  GmoLoader\"\n  f2.puts \"//\"\n  f2.puts \"//  Created by David Nesbitt on 9/2/10.\"\n  f2.puts \"//  Copyright 2010 __MyCompanyName__. All rights reserved.\"\n  f2.puts \"//\\n\\n\"\n  f2.puts \"#import \\\"GLSLProgram.h\\\"\\n\\n\"\n  f2.puts \"#define SHADER_FOLDER @\\\"Shaders\\\"\\n\\n\"\n  f2.puts \"@interface GLSLProgram (PrivateMethods)\"\n  f2.puts \"-(BOOL)loadShader:(NSString*)shaderName;\"\n  f2.puts \"-(BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file;\"\n  f2.puts \"-(BOOL)linkProgram:(GLuint)prog;\"\n  f2.puts \"-(BOOL)validateProgram:(GLuint)prog;\"\n  f2.puts \"@end\\n\\n\"\n  f2.puts \"@implementation GLSLProgram\\n\\n\"\n  f2.puts \"-(id)initWithProgramName:(NSString*)programName {\"\n  f2.puts \"\tif ((self = [super init])) {\"\n  f2.puts \"\t\tif (![self loadShader:programName]) {\"\n  f2.puts \"\t\t\treturn nil;\"\n  f2.puts \"\t\t}\"\n  f2.puts \"\t}\"\n  f2.puts \"\treturn self;\"\n  f2.puts \"}\\n\\n\"\n  f2.puts \"-(BOOL)loadShader:(NSString*)shaderName {\"\n  f2.puts \" \tGLuint vertShader, fragShader;\"\n  f2.puts \"\tNSString *vertShaderPathname, *fragShaderPathname;\"\n  f2.puts \"\"\n  f2.puts \"\t// Create shader program\"\n  f2.puts \"\tprogram = glCreateProgram();\"\n  f2.puts ''\n  f2.puts '\t// Create and compile vertex shader'\n  f2.puts '\tvertShaderPathname = [[NSBundle mainBundle] pathForResource:shaderName ofType:@\"vsh\" inDirectory:SHADER_FOLDER];'\n  f2.puts '\tif (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname]) {'\n  f2.puts '\t\tNSLog(@\"Failed to compile vertex shader\");'\n  f2.puts '\t\treturn FALSE;'\n  f2.puts '\t}'\n  f2.puts ''\n  f2.puts '\t// Create and compile fragment shader'\n  f2.puts '\tfragShaderPathname = [[NSBundle mainBundle] pathForResource:shaderName ofType:@\"fsh\" inDirectory:SHADER_FOLDER];'\n  f2.puts '\tif (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname]) {'\n  f2.puts '\t\tNSLog(@\"Failed to compile fragment shader\");'\n  f2.puts '\t\treturn FALSE;'\n  f2.puts '\t}'\n  f2.puts ''\n  f2.puts '\t// Attach vertex shader to program'\n  f2.puts '\tglAttachShader(program, vertShader);'\n  f2.puts ''\n  f2.puts '\t// Attach fragment shader to program'\n  f2.puts '\tglAttachShader(program, fragShader);'\n  f2.puts ''\n  f2.puts '\tGLint activeAttributeCount;'\n  f2.puts '\tglGetProgramiv(program, GL_ACTIVE_ATTRIBUTES, &activeAttributeCount);'\n  f2.puts ''\n  f2.puts '\tGLchar itemName[MAX_NAME_LENGTH];'\n  f2.puts '\tGLsizei nameLength;'\n  f2.puts '\tGLint size;'\n  f2.puts '\tGLenum type;'\n  f2.puts ''\n  f2.puts '\t// Link program'\n  f2.puts '\tif (![self linkProgram:program]) {'\n  f2.puts '\t\tNSLog(@\"Failed to link program: %d\", program);'\n  f2.puts '\t\tif (vertShader) {'\n  f2.puts '\t\t\tglDeleteShader(vertShader);'\n  f2.puts '\t\t\tvertShader = 0;'\n  f2.puts '\t\t}'\n  f2.puts '\t\tif (fragShader) {'\n  f2.puts '\t\t\tglDeleteShader(fragShader);'\n  f2.puts '\t\t\tfragShader = 0;'\n  f2.puts '\t\t}'\n  f2.puts '\t\tif (program) {'\n  f2.puts '\t\t\tglDeleteProgram(program);'\n  f2.puts '\t\t\tprogram = 0;'\n  f2.puts '\t\t}'\n  f2.puts '\t\treturn FALSE;'\n  f2.puts '\t}'\n  f2.puts ''\n  f2.puts '\tglGetProgramiv(program, GL_ACTIVE_ATTRIBUTES, &activeAttributeCount);'\n  f2.puts '\tfor (GLint i=0; i<activeAttributeCount; i++) {'\n  f2.puts '\t\tglGetActiveAttrib(program, i, MAX_NAME_LENGTH, &nameLength, &size, &type, itemName);'\n  ahash.each_value {|value| f2.puts '\t\tif (strncmp(\"'+value+'\", itemName, nameLength) == 0) { '+value+' = i; }' }\n  f2.puts '\t}'\n  f2.puts ''\n  f2.puts '\tGLint activeUniformCount;'\n  f2.puts '\tglGetProgramiv(program, GL_ACTIVE_UNIFORMS, &activeUniformCount);'\n  f2.puts '\tfor (GLint i=0; i<activeUniformCount; i++) {'\n  f2.puts '\t\tglGetActiveUniform(program, i, MAX_NAME_LENGTH, &nameLength, &size, &type, itemName);'\n  f2.puts '\t\t// Get uniform locations'\n  uhash.each_key {|key| f2.puts '\t\tif (strncmp(\"'+uhash[key]+'\", itemName, nameLength) == 0) { '+key+' = glGetUniformLocation(program, itemName); }' }\n  f2.puts '\t}'\n  f2.puts ''\n  f2.puts '\t// Release vertex and fragment shaders'\n  f2.puts ''\n  f2.puts '\tif (vertShader) { glDeleteShader(vertShader); }'\n  f2.puts '\tif (fragShader) { glDeleteShader(fragShader); }'\n  f2.puts ''\n  f2.puts '\treturn TRUE;'\n  f2.puts '}'\n  f2.puts ''\n  f2.puts '-(BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file {'\n  f2.puts '\tGLint status;'\n  f2.puts ''\n  f2.puts '\tconst GLchar *source;'\n  f2.puts '\tsource = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil] UTF8String];'\n  f2.puts '\tif (!source) {'\n  f2.puts '\t\tNSLog(@\"Failed to load vertex shader\");'\n  f2.puts '\t\treturn FALSE;'\n  f2.puts '\t}'\n  f2.puts ''\n  f2.puts '\t*shader = glCreateShader(type);'\n  f2.puts '\tglShaderSource(*shader, 1, &source, NULL);'\n  f2.puts '\tglCompileShader(*shader);'\n  f2.puts ''\n  f2.puts '#if defined(DEBUG)'\n  f2.puts '\tGLint logLength;'\n  f2.puts '\tglGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);'\n  f2.puts '\tif (logLength > 0) {'\n  f2.puts '\t\tGLchar *log = (GLchar *)malloc(logLength);'\n  f2.puts '\t\tglGetShaderInfoLog(*shader, logLength, &logLength, log);'\n  f2.puts '\t\tNSLog(@\"Shader compile log:\\n%s\", log);'\n  f2.puts '\t\tfree(log);'\n  f2.puts '\t}'\n  f2.puts '#endif'\n  f2.puts ''\n  f2.puts '\tglGetShaderiv(*shader, GL_COMPILE_STATUS, &status);'\n  f2.puts '\tif (status == 0) {'\n  f2.puts '\t\tglDeleteShader(*shader);'\n  f2.puts '\t\treturn FALSE;'\n  f2.puts '\t}'\n  f2.puts '\treturn TRUE;'\n  f2.puts '}'\n  f2.puts ''\n  f2.puts '-(BOOL)linkProgram:(GLuint)prog {'\n  f2.puts '\tGLint status;'\n  f2.puts ''\n  f2.puts '\tglLinkProgram(prog);'\n  f2.puts '#if defined(DEBUG)'\n  f2.puts '\tGLint logLength;'\n  f2.puts '\tglGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);'\n  f2.puts '\tif (logLength > 0) {'\n  f2.puts '\t\tGLchar *log = (GLchar *)malloc(logLength);'\n  f2.puts '\t\tglGetProgramInfoLog(prog, logLength, &logLength, log);'\n  f2.puts '\t\tNSLog(@\"Program link log:\\n%s\", log);'\n  f2.puts '\t\tfree(log);'\n  f2.puts '\t}'\n  f2.puts '#endif'\n  f2.puts '\tglGetProgramiv(prog, GL_LINK_STATUS, &status);'\n  f2.puts '\tif (status == 0) {'\n  f2.puts '\t\treturn FALSE;'\n  f2.puts '\t}'\n  f2.puts '\treturn TRUE;'\n  f2.puts '}'\n  f2.puts ''\n  f2.puts '-(BOOL)validateProgram:(GLuint)prog {'\n  f2.puts '\tGLint logLength, status;'\n  f2.puts ''\n  f2.puts '\tglValidateProgram(prog);'\n  f2.puts '\tglGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);'\n  f2.puts '\tif (logLength > 0) {'\n  f2.puts '\t\tGLchar *log = (GLchar *)malloc(logLength);'\n  f2.puts '\t\tglGetProgramInfoLog(prog, logLength, &logLength, log);'\n  f2.puts '\t\tNSLog(@\"Program validate log:\\n%s\", log);'\n  f2.puts '\t\tfree(log);'\n  f2.puts '\t}'\n  f2.puts ''\n  f2.puts '\tglGetProgramiv(prog, GL_VALIDATE_STATUS, &status);'\n  f2.puts '\tif (status == 0) {'\n  f2.puts '\t\treturn FALSE;'\n  f2.puts '\t}'\n  f2.puts '\treturn TRUE;'\n  f2.puts '}'\n  f2.puts ''\n  f2.puts '-(void)dealloc {'\n  f2.puts '\tif (program) {'\n  f2.puts '\t\tglDeleteProgram(program);'\n  f2.puts '\t}'\n  f2.puts '\t[super dealloc];'\n  f2.puts '}'\n  f2.puts ''\n  f2.puts '@end'\n  f2.puts ''\nend\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* GmoLoaderAppDelegate.m in Sources */,
+				28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */,
+				2514C27310084DB100A42282 /* ES2Renderer.m in Sources */,
+				637AFB431224437D006EC906 /* SceneCrystalWorld.m in Sources */,
+				637AFB451224437D006EC906 /* DataResourceManager.m in Sources */,
+				637AFB471224437D006EC906 /* Math.m in Sources */,
+				637AFB481224437D006EC906 /* GmoModelLoader.m in Sources */,
+				637AFB491224437D006EC906 /* GmoDataStructures.m in Sources */,
+				637AFB4A1224437D006EC906 /* GimDataStructures.m in Sources */,
+				6312485112250BA30059A35A /* matrix.c in Sources */,
+				63E0AE8E1225709700C0A940 /* NezCamera.m in Sources */,
+				6330ADB4122EA9C800E098F9 /* NezBonedModel.m in Sources */,
+				6330ADF6122F5AA900E098F9 /* GLSLProgramManager.m in Sources */,
+				6313AC8C1231EDAE0035BAC3 /* TextureManager.m in Sources */,
+				630BD327123633B8001B710F /* SceneAnimationSelection.m in Sources */,
+				630BD32A12363499001B710F /* NezScene.m in Sources */,
+				63E5708C1237482E0089E49B /* NezSceneManager.m in Sources */,
+				63E5716C12375D1D0089E49B /* NezAnimatedModel.m in Sources */,
+				63F04C62123A2DD200E54284 /* GL_HALF_FLOAT_OES.m in Sources */,
+				636B97EE123E461A00640E7B /* NezHaloModel.m in Sources */,
+				63F7894E123F9B770015A10F /* ModeSelectionScene.m in Sources */,
+				63C905B912422DBF00058468 /* GLSLProgram.m in Sources */,
+				632B6B491244D7590092EB87 /* ZoomRotationController.m in Sources */,
+				63DD51ED124517C70028ED64 /* NezSceneController.m in Sources */,
+				63DD527A12451E820028ED64 /* AnimationSelectionController.m in Sources */,
+				63DD527F1245210B0028ED64 /* ModeSelectionController.m in Sources */,
+				63DD5294124523480028ED64 /* CrystalWorldController.m in Sources */,
+				6396FC0E1248504100593EBF /* SceneAnimationEditor.m in Sources */,
+				6396FC111248505B00593EBF /* AnimationEditorController.m in Sources */,
+				6349D201125AED04004B1969 /* ModelNameAniIndexHolder.m in Sources */,
+				6349D2B8125B1389004B1969 /* NezPlaybackBar.m in Sources */,
+				6349D2BC125B13AE004B1969 /* NezPlaybackBarController.m in Sources */,
+				63409BDF125EE1E900BB700C /* NezController.m in Sources */,
+				63D6BA6412713ED2009C6FF6 /* NezModeSelectionController.m in Sources */,
+				63D6BA9712714551009C6FF6 /* NezModeSelectionView.m in Sources */,
+				63D6BABA1271476F009C6FF6 /* NezBaseSceneView.m in Sources */,
+				63D6BAE6127154F0009C6FF6 /* NezAnimationSelectionView.m in Sources */,
+				63D6BAEA127154FD009C6FF6 /* NezAnimationSelectionController.m in Sources */,
+				63D6BC7912716FA8009C6FF6 /* NezCrystalWorldView.m in Sources */,
+				63D6BC7D12716FB8009C6FF6 /* NezCrystalWorldController.m in Sources */,
+				63D6BCC812717641009C6FF6 /* NezZoomRotationView.m in Sources */,
+				63D8B03B127264CD00E7F8D1 /* NezBaseSceneController.m in Sources */,
+				63E5BF59127429E1004C2EC5 /* NezUIToolbar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GmoLoader_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "GmoLoader-Info.plist";
+				PRODUCT_NAME = GmoLoader;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = GmoLoader_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "GmoLoader-Info.plist";
+				PRODUCT_NAME = GmoLoader;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2.2;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "GmoLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GmoLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
